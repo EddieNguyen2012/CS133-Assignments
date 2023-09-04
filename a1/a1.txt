@@ -1,0 +1,27 @@
+Q2: /mnt/scratch/manh23fa
+Q3: uid=1023(manh23fa) gid=1023(manh23fa) groups=1023(manh23fa)
+Q4: 
++ error when cd to temp:  -bash: cd: temp: Permission denied
++ we can ls (but it gives no output since there is nothing under it), output when ls -l: total 0
++ we can not create file under it: touch: cannot touch 'temp/someThing.txt': Permission denied
+Q5:
++ we can mv temp 2 to temp3
++ error when cp temp 3 .:  cp: -r not specified; omitting directory 'temp3'
++ we can cp directory by using cp -r
+Q6:
++ Memory information file: meminfo
++ CPU information file: cpuinfo
+Q7:
+MemTotal:       73080512 kB
+Q8:
+There are 255 processors and they have identical info so I extracted the info of the last one only
+Info of the last processor:
+processor	: 255
+cpu		: POWER8 (architected), altivec supported
+clock		: 3425.000000MHz = 3.425 GHz
+Q9:
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+Q10:
+lrwxrwxrwx. 1 root root 22 Apr  6  2022 /etc/os-release -> ..//usr/lib/os-release
+permission for all users is rwx: read, write and execute

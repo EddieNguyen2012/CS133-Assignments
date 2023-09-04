@@ -1,0 +1,38 @@
+Q1:
+    2  mkdir a1			
+    3  cd a1
+Q2:
+    7  echo $HOME > a1.txt		:get home directory path and redirect output to a1.txt
+Q3:
+    8  id >> a1.txt			:get UID and group info and redirect output to a1.txt
+Q4:
+   10  mkdir temp
+   22  chmod -x temp			:remove execute permission for temp
+   23  cd temp 2>> a1.txt		:attempted to cd to temp and redirect error message to a1.txt
+   24  ls temp				:attempted to ls temp
+   26  ls -l temp >> a1.txt		:attempted to ls -l temp and redirect output to a1.txt 
+   28  touch temp/someThing.txt 2>> a1.txt	:attempted to create a file under temp and redirect error message to a1.txt
+Q5:
+   29  mkdir temp2			
+   30  mv temp2 temp3			:moving temp2 to temp3
+   32  cp temp3 . 2>> a1.txt		:tried copying temp3 to current folder and redirect error message to a1.txt 
+   34  cp -r temp3 ~			:tried copying temp3 to home folder using cp -r
+Q6:
+   39  ls /proc | grep cpu >> a1.txt	:list files in /proc and grep for files that has cpu in name then redirect output to a1.txt 
+   40  ls /proc | grep mem >> a1.txt	:same thing as above command but this time grep for files that has mem in name
+Q7:
+   43  head /proc/meminfo >> a1.txt	:extract 10 lines at the beginning of meminfo to a1.txt 
+Q8:
+   44  head /proc/cpuinfo		:read first 10 lines of cpuinfo 
+   45  tail /proc/cpuinfo 		:read last 10 lines of cpuinfo
+   46  cat /proc/cpuinfo 		:read the whole cpuinfo
+Because the info of each processor are almost identical, I chose to  extract only the info of the last one to a1.txt
+   47  tail /proc/cpuinfo | grep processor >> a1.txt
+   48  tail /proc/cpuinfo | grep cpu >> a1.txt 
+   49  tail /proc/cpuinfo | grep clock >> a1.txt 
+Q9:
+   51  ls /etc | grep os		:search for file in /etc folder that has os in name
+   52  cat /etc/os-release		:check for the content in os-release
+   53  head -2 /etc/os-release >> a1.txt :extract the os name and version to a1.txt
+Q10:
+   54  ls -l /etc/os-release >> a1.txt 	:check permission information of os-release and output to a1.txt		
