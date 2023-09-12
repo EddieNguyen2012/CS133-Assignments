@@ -1,0 +1,3 @@
+  569  cut -d ',' -f 8 2019-01.csv | sort -n | uniq -c | sort -nr | head -3 > ws3.txt
+  570  cut -d ',' -f 8 2019-02.csv | sort -n | uniq -c | sort -nr | head -3 >> ws3.txt
+I used pipeline to create a process. First, I used cut -d ',' -f 8 to indicate ',' as delimiter and set the mark at 8th field, then I use sort -n to sort the result in numeric order, then using uniq -c to count occurences and extract the unique locations. After that, I sort the list of location by their occurences in reverse using sort -nr and extract the first 3 lines using head -3 and redirect the result to ws3.txt   

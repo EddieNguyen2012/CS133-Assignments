@@ -1,0 +1,8 @@
+Q1:
+ Top 1: with 332473 occurences 237.0
+ Top 2: with 323008 occurences 236.0
+ Top 3: with 312392 occurences 161.0
+Q2:
+ Top 1: with 294584 occurences 237.0
+ Top 2: with 286773 occurences 161.0
+ Top 3: with 280640 occurences 236.0
