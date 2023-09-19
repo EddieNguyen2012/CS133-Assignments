@@ -1,0 +1,14 @@
+  759  mkdir ws4
+  760  mkdir ws4/FARE
+  761  vim .bashrc
+  762  l
+  763  w
+  764  cd taxidata
+  765  grep "145.0,145.0" 2019-06.csv | cut -d ',' -f 11 > 145.0-145.0.txt
+  766  grep "141.0,140.0" 2019-06.csv | cut -d ',' -f 11 > 141.0-140.0.txt
+  767  cp 145.0-145.0.txt ~/ws4/FARE/
+  768  cp 141.0-140.0.txt ~/ws4/FARE/
+  769  cd ~/ws4/FARE/
+  770  cat 141.0-140.0.txt | paste -sd+ | bc -l | { read sum; count=$(wc -l < 141.0-140.0.txt); echo "scale=2; $sum / $count" | bc -l; } > ws4.txt
+  771  cat 145.0-145.0.txt | paste -sd+ | bc -l | { read sum; count=$(wc -l < 145.0-145.0.txt); echo "scale=2; $sum / $count" | bc -l; } >> ws4.txt
+  772  history > cmds.log
