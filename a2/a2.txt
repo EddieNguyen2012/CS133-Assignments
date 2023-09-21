@@ -1,0 +1,18 @@
+Q1: avg = 17.99
+Q2: max = 1309.8
+Q3: 
+ Top 1  with 288108 times 236.0
+ Top 2  with 275792 times 237.0
+ Top 3  with 262941 times 161.0
+ Top 4  with 205989 times 230.0
+ Top 5  with 205675 times 170.0
+ Top 6  with 201612 times 162.0
+ Top 7  with 187211 times 142.0
+ Top 8  with 179086 times 48.0
+ Top 9  with 174439 times 234.0
+ Top 10 with 173856 times 239.0
+Q4:
+ Top pickup location with 347992 times: 237.0
+ Top drop off location with the above pickup location with 52363 times: 236.0
+Q5:
+ Most busiest location with 3641682 pick up time throughout a year: 237.0

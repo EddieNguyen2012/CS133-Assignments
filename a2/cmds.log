@@ -1,0 +1,27 @@
+  806  cd taxidata/
+  807  grep "2019-05-11" 2019-05.csv | cut -d ',' -f 17 > 2019-05-11.txt
+  808  paste -sd+ 2019-05-11.txt| bc -l | { read sum ; count=$(wc -l < 2019-05-11.txt| bc); echo "scale=2;$sum/$count" | bc } > a2.txt;  }
+  809  cd taxidata/
+  810  vi 2019-05.csv 
+  811  cd taxidata/
+  812  cat 2019-05-11.txt | paste -sd+ | bc -l | { read sum ; count=$(wc -l < 2019-05-11.txt| bc); echo "scale=2;$sum/$count" | bc -l} > a2.txt; }
+  813  cd taxidata/
+  814  grep "2019-05-11" 2019-05.csv | cut -d ',' -f 17 | paste -sd+ | bc -l | { read sum ; count=$(wc -l | bc); echo "scale=2;$sum/$count" | bc } > a2.txt;  }
+  815  grep "2019-05-11" 2019-05.csv | cut -d ',' -f 17 | paste -sd+ | bc -l | { read sum ; count=$(wc -l | bc); echo "
+  816  cd taxidata/
+  817  scp 2019-05.csv /Downloads
+  818  scp 2019-05.csv /Users/eddie/Downloads
+  819  cat 2019-05-11.txt | paste -sd+ | bc -l | { read sum ; count=$(wc -l < 2019-05-11.txt| bc -l); echo "scale=2;$sum/$count" | bc -l} > a2.txt; }
+  820  cat 2019-05-11.txt | paste -sd+ | bc -l | { read sum ; count=$(wc -l < 2019-05-11.txt| bc -l); echo "scale=2;$sum/$count" | bc -l; } > a2.txt; }
+  821  cat 2019-05-11.txt | paste -sd+ | bc -l | { read sum ; count=$(wc -l < 2019-05-11.txt| bc -l); echo "scale=2;$sum/$count" | bc -l; } > a2.txt
+  822  cat a2.txt 
+  823  cat 2019-05-11.txt | sort -r | head -1 >> a2.txt 
+  824  cat 2019-05-11.txt | sort -nr | head -1 >> a2.txt 
+  825  cat a2.txt 
+  826  vim 2019-05.csv 
+  827  cd taxidata/
+  828  vim 2019-05.csv 
+  866  grep "^[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,$(cut -d ',' -f 8 2019-05.csv | sort -n | uniq -c | sort -nr | head -1 | tee -a a2.txt | cut -d ' ' -f 3)" 2019-05.csv | cut -d ',' -f 9 | sort -n | uniq -c | sort -nr | head -1  >> a2.txt 
+  879  cat *.csv | cut -d ',' -f 8 | sort -n | uniq -c | sort -nr | head -1 >> a2.txt 
+  880  vim a2.txt 
+  881  history > cmds.log
