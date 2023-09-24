@@ -1,0 +1,6 @@
+  901  grep -E "^([^,]*,){7}234" 2019-05.csv | cut -d, -f9 | sort -n | uniq -c | sort -nr | head -100 | awk '{print $2}' > top100do.txt
+ 1003  for doLoc in $(cat top100doloc.txt); do grep -E "^([^,]*,){8}$doLoc" ~/taxidata/2019-08.csv > do234/$doLoc.txt; done
+ 1004  wc -l do234/1.0.txt > ws5.txt
+ 1005  wc -l do234/3.0.txt >> ws5.txt
+ 1006  wc -l do234/48.0.txt > ws5.txt
+ 1007  wc -l do234/223.0.txt >> ws5.txt
