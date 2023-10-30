@@ -1,7 +1,7 @@
 Q1:
- 1016  sed -n '/^2.0/ p' 2019-11.csv > vendor2.csv
+ 1016  sed -n '/^2.0/ p' 2019-11.csv > vendor2.csv (get line start with 2.0) (-n to not print out (suppress) the default printing)
 Q2:
- 1028  sed 's/[:"-]//g' 2019-11.csv > no-seperators.csv
+ 1028  sed 's/[:"-]//g' 2019-11.csv > no-seperators.csv (remove :, ", and - characters) ([] mean anyone of them)
 Q3:
  1037  sed -r 's/\.([0-9]+)//g' no-seperators.csv > no-fraction.csv
 Output to files:
