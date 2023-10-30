@@ -1,5 +1,6 @@
-Q1:
- 1056  vi awk_script: I use awk script to do this part 
- 1058  awk -f awk_script 2019-12.csv > result.txt
+Q1: I use awk_script file to store my commands
+  1050 vi awk_script
+  1051  awk -f awk_script ../2019-12.csv > result.txt
 Q2:
- 1059  awk -v FS=" " '{print $2,$0}' result.txt | sort -nr | awk -v FS=" " '{print $2,$1}' | head -20 > ws7.txt
+ 1052  awk -v FS=" " '{print $2,$0}' result.txt | sort -nr | awk -v FS=" " '{print $2,$1}' | head -20 > ws7.txt
+ 1053  history > cmnd.log
