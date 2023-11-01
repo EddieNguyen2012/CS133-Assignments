@@ -1,0 +1,14 @@
+BEGIN {
+  FS=","
+  OFS=","
+}
+NR > 1 {
+  trip_distance_total_amt[$5] += $17
+  occ_count[$5]++
+}
+END{ 
+  for (td in occ_count) {
+    avg_amount = trip_distance_total_amt[td] / occ_count[td]
+    print td,avg_amount
+  }
+}
