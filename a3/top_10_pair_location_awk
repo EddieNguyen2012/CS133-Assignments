@@ -1,0 +1,14 @@
+BEGIN {
+  FS=","
+  OFS=","
+}
+NR > 1 {
+  pair_location_occ_count[$8 "-" $9]++
+  pair_location_total_sum[$8 "-" $9] += $17
+}
+END {
+  for (pair in pair_location_occ_count) {
+    avg_total = pair_location_total_sum[pair] / pair_location_occ_count[pair]
+    print avg_total,pair
+  }
+} 
