@@ -12,4 +12,4 @@ NO_ANIMATION = 1
 set autoscale x
 set autoscale y
 
-plot 'a3t4.dat' using 1:2 with circles lc rgb 'coral' 
+plot 'a3t4.dat' using 1:2 with points lc rgb 'coral' 
