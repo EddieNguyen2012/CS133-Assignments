@@ -9,4 +9,4 @@ Second, we use awk, indicate the delimiter as comma, newline is \r\n, and OFS is
 
 Finally, we use another sed to see if the data is missing comma between the year and genre and replace the space with comma. 
 
-Drawback: I had a plan to fix some missing row that is missing the year data. I attempted to use awk but it is very hard for awk to detect year data in entry, where title has comma in there.      
+Drawback: I had a plan to fix some missing row that is missing the year data. I attempted to use awk to find whether a line is missing data and place an additional comma but it is very hard for awk to detect year data in entry, where title has comma in there.      
