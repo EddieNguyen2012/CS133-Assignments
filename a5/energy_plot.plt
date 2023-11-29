@@ -3,7 +3,7 @@ set out 'energy_valence.png'
 set datafile separator ","
 set xlabel "Year"
 set ylabel "Value"
-set title "The trends of Energy from Top Hits Spotify in the period from 1999 - 2020"
+set title "The trends of Energy from Spotify's Top Hits in the period from 1999 - 2019"
 set boxwidth 0.5
 set style fill solid
 
