@@ -1,0 +1,8 @@
+ 1236  vi awk_file
+ 1237  vi awk_parse
+ 1238  vi my_script.sh
+ 1239  chmod +rwx my_script.sh
+ 1240  sh my_script.sh
+ 1241  vi energy_plot.plt
+ 1242  vi valence_plot.plt
+ 1243  gnuplot 

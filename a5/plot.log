@@ -1,0 +1,3 @@
+load 'energy_plot.plt'
+load 'valence_plot.plt'
+q
