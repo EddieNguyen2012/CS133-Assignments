@@ -1,5 +1,5 @@
 set terminal pngcairo size 1920,1080
-set out 'energy_valence.png'
+set out 'energy.png'
 set datafile separator ","
 set xlabel "Year"
 set ylabel "Value"
